@@ -1,0 +1,16 @@
+{
+  "name": "百城花信 · 中国市花地图",
+  "short_name": "百城花信",
+  "description": "中国 42 座城市市花地图,12 月花信流转,80+ 处赏花胜地",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f5ecdb",
+  "theme_color": "#a8324a",
+  "lang": "zh-CN",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

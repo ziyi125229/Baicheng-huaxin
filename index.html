@@ -3,7 +3,43 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>百城花信 · 中国市花地图</title>
+<title>百城花信 · 中国市花地图 · A Floral Atlas of China</title>
+
+<!-- SEO -->
+<meta name="description" content="点·城·看·花·开。中国 42 座城市的市花地图，按 12 个月切换花信，含 80+ 处经典赏花胜地、古典水彩花卉图鉴、花语诗词与花期日历。"/>
+<meta name="keywords" content="百城花信,中国市花,赏花地图,花期日历,花信风,城市花卉,中国花卉地图"/>
+<meta name="author" content="ziyi125229"/>
+<meta name="theme-color" content="#a8324a"/>
+
+<!-- Open Graph(微信/微博/小红书/Facebook 分享卡片) -->
+<meta property="og:title" content="百城花信 · 中国市花地图"/>
+<meta property="og:description" content="点·城·看·花·开。42 座城市市花 × 12 月花信流转 × 80+ 处经典赏花胜地，含古典水彩花卉图鉴与花语诗词。"/>
+<meta property="og:image" content="https://ziyi125229.github.io/Baicheng-huaxin/og-image.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:image:alt" content="百城花信 · 中国市花地图预览"/>
+<meta property="og:url" content="https://ziyi125229.github.io/Baicheng-huaxin/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="zh_CN"/>
+<meta property="og:site_name" content="百城花信"/>
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="百城花信 · 中国市花地图"/>
+<meta name="twitter:description" content="点·城·看·花·开。42 座城市市花 × 12 月花信流转 × 80+ 处经典赏花胜地。"/>
+<meta name="twitter:image" content="https://ziyi125229.github.io/Baicheng-huaxin/og-image.png"/>
+
+<!-- Favicon: 内嵌 SVG 梅花,跟主题色一致(crimson + gold) -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cg%20transform%3D%22translate(50%2050)%22%3E%3Cg%20fill%3D%22%23a8324a%22%3E%3Cellipse%20rx%3D%2214%22%20ry%3D%2222%22%20cy%3D%22-22%22%2F%3E%3Cellipse%20rx%3D%2214%22%20ry%3D%2222%22%20cy%3D%22-22%22%20transform%3D%22rotate(72)%22%2F%3E%3Cellipse%20rx%3D%2214%22%20ry%3D%2222%22%20cy%3D%22-22%22%20transform%3D%22rotate(144)%22%2F%3E%3Cellipse%20rx%3D%2214%22%20ry%3D%2222%22%20cy%3D%22-22%22%20transform%3D%22rotate(216)%22%2F%3E%3Cellipse%20rx%3D%2214%22%20ry%3D%2222%22%20cy%3D%22-22%22%20transform%3D%22rotate(288)%22%2F%3E%3C%2Fg%3E%3Ccircle%20r%3D%227%22%20fill%3D%22%23f0c640%22%2F%3E%3Ccircle%20r%3D%223%22%20fill%3D%22%237a1f33%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"/>
+
+<!-- PWA -->
+<link rel="manifest" href="manifest.json"/>
+<link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+
+<!-- Performance: 字体预连接 -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;700;900&family=Ma+Shan+Zheng&family=ZCOOL+XiaoWei&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -11536,6 +11572,14 @@ function initMapZoomPan() {
   };
 }
 
+</script>
+<script>
+// 注册 Service Worker (PWA + 离线缓存)
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js').catch(e => console.warn('SW reg failed:', e));
+  });
+}
 </script>
 </body>
 </html>
