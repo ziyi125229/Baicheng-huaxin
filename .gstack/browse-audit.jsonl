@@ -8,3 +8,8 @@
 {"ts":"2026-06-02T07:06:37.086Z","cmd":"goto","args":"http://127.0.0.1:8848/index.html","origin":"http://127.0.0.1:8848/index.html","durationMs":470,"status":"ok","hasCookies":false,"mode":"launched"}
 {"ts":"2026-06-02T07:06:37.136Z","cmd":"console","args":"--errors","origin":"http://127.0.0.1:8848/index.html","durationMs":1,"status":"ok","hasCookies":false,"mode":"launched"}
 {"ts":"2026-06-02T07:06:37.397Z","cmd":"screenshot","args":"/tmp/bhx-clean.png","origin":"http://127.0.0.1:8848/index.html","durationMs":228,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-02T07:56:35.379Z","cmd":"goto","args":"http://127.0.0.1:8848/index.html","origin":"http://127.0.0.1:8848/index.html","durationMs":4564,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-02T07:56:37.358Z","cmd":"click","args":".layer-btn[data-layer=\"spot\"]","origin":"http://127.0.0.1:8848/index.html","durationMs":1935,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-02T07:56:37.409Z","cmd":"wait","args":"--networkidle","origin":"http://127.0.0.1:8848/index.html","durationMs":0,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-02T07:56:37.447Z","cmd":"console","args":"--errors","origin":"http://127.0.0.1:8848/index.html","durationMs":1,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-02T07:56:37.730Z","cmd":"screenshot","args":"/tmp/bhx-spots.png","origin":"http://127.0.0.1:8848/index.html","durationMs":244,"status":"ok","hasCookies":false,"mode":"launched"}

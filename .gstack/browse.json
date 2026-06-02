@@ -1,8 +1,8 @@
 {
-  "pid": 8324,
-  "port": 49303,
-  "token": "ac57c67c-7339-4331-972c-8965e900c3a5",
-  "startedAt": "2026-06-02T06:54:29.080Z",
+  "pid": 16533,
+  "port": 26005,
+  "token": "0b3c5c31-6213-4f52-8fab-5f9418989362",
+  "startedAt": "2026-06-02T07:56:30.746Z",
   "serverPath": "/Users/zhangziyi/.claude/skills/gstack/browse/src/server.ts",
   "mode": "launched",
   "configHash": "303a7eeccc03078b"
