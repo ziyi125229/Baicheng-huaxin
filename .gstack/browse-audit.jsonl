@@ -2,3 +2,9 @@
 {"ts":"2026-06-02T06:52:28.108Z","cmd":"wait","args":"--networkidle","origin":"http://127.0.0.1:8848/index.html","durationMs":1536,"status":"ok","hasCookies":false,"mode":"launched"}
 {"ts":"2026-06-02T06:52:28.158Z","cmd":"console","args":"--errors","origin":"http://127.0.0.1:8848/index.html","durationMs":1,"status":"ok","hasCookies":false,"mode":"launched"}
 {"ts":"2026-06-02T06:52:28.427Z","cmd":"screenshot","args":"/tmp/bhx-home.png","origin":"http://127.0.0.1:8848/index.html","durationMs":232,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-02T06:57:35.345Z","cmd":"goto","args":"http://127.0.0.1:8848/index.html","origin":"http://127.0.0.1:8848/index.html","durationMs":1249,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-02T06:57:36.927Z","cmd":"wait","args":"--networkidle","origin":"http://127.0.0.1:8848/index.html","durationMs":1532,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-02T06:57:37.205Z","cmd":"screenshot","args":"/tmp/bhx-now.png","origin":"http://127.0.0.1:8848/index.html","durationMs":233,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-02T07:06:37.086Z","cmd":"goto","args":"http://127.0.0.1:8848/index.html","origin":"http://127.0.0.1:8848/index.html","durationMs":470,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-02T07:06:37.136Z","cmd":"console","args":"--errors","origin":"http://127.0.0.1:8848/index.html","durationMs":1,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-02T07:06:37.397Z","cmd":"screenshot","args":"/tmp/bhx-clean.png","origin":"http://127.0.0.1:8848/index.html","durationMs":228,"status":"ok","hasCookies":false,"mode":"launched"}
