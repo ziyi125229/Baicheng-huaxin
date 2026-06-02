@@ -6,7 +6,7 @@
 
 🌸 **在线访问：https://ziyi125229.github.io/Baicheng-huaxin/**
 
-![百城花信预览](og-image.png)
+![百城花信预览](og-image.jpg)
 
 ---
 
@@ -39,7 +39,7 @@
 
 ```
 index.html              主页面(单文件应用)
-og-image.png            分享预览图(1200×630)
+og-image.jpg            分享预览图(1200×630)
 icon-192.png            PWA 图标
 icon-512.png            PWA 图标
 apple-touch-icon.png    iOS 主屏图标

@@ -1,6 +1,6 @@
 // 百城花信 service worker
 // 策略: 主页面 stale-while-revalidate(更新及时),静态资源 cache-first
-const CACHE = 'baicheng-huaxin-v1';
+const CACHE = 'baicheng-huaxin-v2';
 const PRECACHE = [
   './',
   './index.html',

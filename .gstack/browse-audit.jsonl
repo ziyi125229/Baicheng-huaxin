@@ -1,0 +1,4 @@
+{"ts":"2026-06-02T06:52:26.525Z","cmd":"goto","args":"http://127.0.0.1:8848/index.html","origin":"http://127.0.0.1:8848/index.html","durationMs":1367,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-02T06:52:28.108Z","cmd":"wait","args":"--networkidle","origin":"http://127.0.0.1:8848/index.html","durationMs":1536,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-02T06:52:28.158Z","cmd":"console","args":"--errors","origin":"http://127.0.0.1:8848/index.html","durationMs":1,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-02T06:52:28.427Z","cmd":"screenshot","args":"/tmp/bhx-home.png","origin":"http://127.0.0.1:8848/index.html","durationMs":232,"status":"ok","hasCookies":false,"mode":"launched"}

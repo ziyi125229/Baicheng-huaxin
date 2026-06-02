@@ -14,7 +14,7 @@
 <!-- Open Graph(微信/微博/小红书/Facebook 分享卡片) -->
 <meta property="og:title" content="百城花信 · 中国市花地图"/>
 <meta property="og:description" content="点·城·看·花·开。42 座城市市花 × 12 月花信流转 × 80+ 处经典赏花胜地，含古典水彩花卉图鉴与花语诗词。"/>
-<meta property="og:image" content="https://ziyi125229.github.io/Baicheng-huaxin/og-image.png"/>
+<meta property="og:image" content="https://ziyi125229.github.io/Baicheng-huaxin/og-image.jpg"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
 <meta property="og:image:alt" content="百城花信 · 中国市花地图预览"/>
@@ -27,7 +27,41 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="百城花信 · 中国市花地图"/>
 <meta name="twitter:description" content="点·城·看·花·开。42 座城市市花 × 12 月花信流转 × 80+ 处经典赏花胜地。"/>
-<meta name="twitter:image" content="https://ziyi125229.github.io/Baicheng-huaxin/og-image.png"/>
+<meta name="twitter:image" content="https://ziyi125229.github.io/Baicheng-huaxin/og-image.jpg"/>
+<meta property="og:image:type" content="image/jpeg"/>
+
+<!-- 规范链接 + 搜索引擎 -->
+<link rel="canonical" href="https://ziyi125229.github.io/Baicheng-huaxin/"/>
+<meta name="robots" content="index, follow, max-image-preview:large"/>
+<link rel="sitemap" type="application/xml" href="sitemap.xml"/>
+
+<!-- 结构化数据 JSON-LD：让 Google 富摘要识别为网站 + 创作作品 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://ziyi125229.github.io/Baicheng-huaxin/#website",
+      "url": "https://ziyi125229.github.io/Baicheng-huaxin/",
+      "name": "百城花信 · 中国市花地图",
+      "description": "中国 42 座城市的市花地图，按 12 个月切换花信，含 80+ 处经典赏花胜地、古典水彩花卉图鉴、花语诗词与花期日历。",
+      "inLanguage": "zh-CN"
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "百城花信 · 中国市花地图",
+      "headline": "点·城·看·花·开",
+      "url": "https://ziyi125229.github.io/Baicheng-huaxin/",
+      "image": "https://ziyi125229.github.io/Baicheng-huaxin/og-image.jpg",
+      "author": { "@type": "Person", "name": "ziyi125229" },
+      "inLanguage": "zh-CN",
+      "keywords": "百城花信,中国市花,赏花地图,花期日历,花信风,城市花卉,中国花卉地图",
+      "about": "中国 42 座城市市花与花信流转的交互式地图"
+    }
+  ]
+}
+</script>
 
 <!-- Favicon: 内嵌 SVG 梅花,跟主题色一致(crimson + gold) -->
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cg%20transform%3D%22translate(50%2050)%22%3E%3Cg%20fill%3D%22%23a8324a%22%3E%3Cellipse%20rx%3D%2214%22%20ry%3D%2222%22%20cy%3D%22-22%22%2F%3E%3Cellipse%20rx%3D%2214%22%20ry%3D%2222%22%20cy%3D%22-22%22%20transform%3D%22rotate(72)%22%2F%3E%3Cellipse%20rx%3D%2214%22%20ry%3D%2222%22%20cy%3D%22-22%22%20transform%3D%22rotate(144)%22%2F%3E%3Cellipse%20rx%3D%2214%22%20ry%3D%2222%22%20cy%3D%22-22%22%20transform%3D%22rotate(216)%22%2F%3E%3Cellipse%20rx%3D%2214%22%20ry%3D%2222%22%20cy%3D%22-22%22%20transform%3D%22rotate(288)%22%2F%3E%3C%2Fg%3E%3Ccircle%20r%3D%227%22%20fill%3D%22%23f0c640%22%2F%3E%3Ccircle%20r%3D%223%22%20fill%3D%22%237a1f33%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"/>
@@ -2234,6 +2268,16 @@ footer {
   body { padding-bottom: 50px; }
 }
 
+/* 可访问性：尊重「减少动态效果」系统偏好，关闭装饰性动画 */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -2276,7 +2320,7 @@ footer {
     </div>
     <div class="toolbar-actions">
       <div class="search-wrap">
-        <input type="text" id="searchInput" class="search-input" placeholder="搜索城市或花卉…" autocomplete="off"/>
+        <input type="text" id="searchInput" class="search-input" placeholder="搜索城市或花卉…" autocomplete="off" aria-label="搜索城市或花卉"/>
         <div class="search-results" id="searchResults"></div>
       </div>
       <button class="tool-btn" id="locateBtn" title="定位我的城市">📍 定位</button>
@@ -2886,7 +2930,7 @@ const SPOT_CUSTOM_IMAGES = {
   '满觉陇桂雨': 'images/spots/满觉陇桂雨.jpg',
   '微山湖荷花': 'images/spots/微山湖荷花.jpg',
   '西湖荷花': 'images/spots/西湖荷花.jpg',
-  '海洋公园向日葵': 'images/spots/海洋公园向日葵.png',
+  '海洋公园向日葵': 'images/spots/海洋公园向日葵.jpg',
   '栖霞山': 'images/spots/栖霞山.jpg',
   '钓鱼台银杏大道': 'images/spots/钓鱼台银杏大道.jpg',
   '厦门三角梅': 'images/spots/厦门三角梅.jpg',
@@ -2937,6 +2981,12 @@ const SPOT_CUSTOM_IMAGES = {
   '上海豫园': 'images/spots/上海豫园.jpg',
   '潮州韩江木棉': 'images/spots/潮州韩江木棉.jpg',
   '天坛丁香': 'images/spots/天坛丁香.jpg',
+  '腾冲银杏村': 'images/spots/腾冲银杏村.jpg',
+  '中山公园郁金香': 'images/spots/中山公园郁金香.jpg',
+  '海南三角梅': 'images/spots/海南三角梅.jpg',
+  '旅顺二〇三樱花': 'images/spots/旅顺二〇三樱花.jpg',
+  '瘦西湖琼花': 'images/spots/瘦西湖琼花.jpg',
+  '天平山红枫': 'images/spots/天平山红枫.jpg',
   // ↑↑↑ 自定义图片粘贴区结束 ↑↑↑
 };
 
@@ -10112,7 +10162,7 @@ function selectSpot(idx) {
       
       <div class="spot-scene-wrap" id="spot-scene-${idx}">
         <canvas class="spot-scene-canvas" id="${canvasId}" width="380" height="240"></canvas>
-        <img class="spot-scene-photo" id="spot-photo-${idx}" alt="" aria-label="实拍照片"/>
+        <img class="spot-scene-photo" id="spot-photo-${idx}" alt="${spot.name}实拍照片" loading="lazy"/>
         <div class="spot-scene-loading" id="spot-loading-${idx}">载入照片…</div>
         <div class="spot-poetic">${spot.poetic}</div>
         <button class="spot-scene-toggle" data-mode="painting" data-spot-idx="${idx}" title="切换照片">
@@ -10375,7 +10425,7 @@ function showExportDialog(spotName, dataURL) {
     <div class="export-dialog">
       <div class="export-dialog-head">
         <span class="export-dialog-title">导出「${spotName}」的自定义图片</span>
-        <button class="export-dialog-close">×</button>
+        <button class="export-dialog-close" aria-label="关闭对话框">×</button>
       </div>
       <div class="export-dialog-body">
         <p class="export-step"><strong>步骤 1:</strong> 复制下面的代码(约 ${sizeKB} KB)</p>
@@ -10719,7 +10769,7 @@ function selectCity(cityName) {
       <div class="flower-block">
         <div class="flower-illust" data-type="${f.type}" data-latin="${f.latin}" data-name="${f.name}" data-mode="painting">
           <img class="flower-watercolor" src="${getFlowerDataURL(f.type, f.color, 200)}" width="200" height="200" alt="${f.name}"/>
-          <img class="flower-photo" alt=""/>
+          <img class="flower-photo" alt="${f.name}实景照片" loading="lazy"/>
           <div class="flower-photo-loading">载入照片…</div>
           <div class="seal-mark">${f.name.charAt(0)}</div>
           <button class="flower-toggle" data-mode="painting" title="切换照片">
@@ -11693,10 +11743,10 @@ function initMapZoomPan() {
   const controls = document.createElement('div');
   controls.className = 'zoom-controls';
   controls.innerHTML = `
-    <button class="zoom-btn" data-action="in" title="放大 (或按住 Ctrl 滚轮)">+</button>
+    <button class="zoom-btn" data-action="in" title="放大 (或按住 Ctrl 滚轮)" aria-label="放大地图">+</button>
     <div class="zoom-indicator" id="zoomIndicator">100%</div>
-    <button class="zoom-btn" data-action="out" title="缩小">−</button>
-    <button class="zoom-btn zoom-reset" data-action="reset" title="复位">⟲</button>
+    <button class="zoom-btn" data-action="out" title="缩小" aria-label="缩小地图">−</button>
+    <button class="zoom-btn zoom-reset" data-action="reset" title="复位" aria-label="复位地图">⟲</button>
   `;
   mapFrame.appendChild(controls);
   

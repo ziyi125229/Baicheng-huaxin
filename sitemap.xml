@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://ziyi125229.github.io/Baicheng-huaxin/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://ziyi125229.github.io/Baicheng-huaxin/og-image.jpg</image:loc>
+      <image:title>百城花信 · 中国市花地图</image:title>
+      <image:caption>中国 42 座城市市花 × 12 月花信流转 × 80+ 处经典赏花胜地</image:caption>
+    </image:image>
+  </url>
+</urlset>

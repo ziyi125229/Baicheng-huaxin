@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ziyi125229.github.io/Baicheng-huaxin/sitemap.xml
