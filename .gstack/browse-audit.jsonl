@@ -22,3 +22,5 @@
 {"ts":"2026-06-03T07:37:35.391Z","cmd":"screenshot","args":"/tmp/bhx-404.png","origin":"http://127.0.0.1:8848/404.html","durationMs":1321,"status":"ok","hasCookies":false,"mode":"launched"}
 {"ts":"2026-06-03T08:22:07.205Z","cmd":"goto","args":"http://127.0.0.1:8848/index.html","origin":"http://127.0.0.1:8848/index.html","durationMs":1334,"status":"ok","hasCookies":false,"mode":"launched"}
 {"ts":"2026-06-03T08:22:07.260Z","cmd":"console","args":"--errors","origin":"http://127.0.0.1:8848/index.html","durationMs":1,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-03T08:27:10.137Z","cmd":"goto","args":"http://127.0.0.1:8848/index.html","origin":"http://127.0.0.1:8848/index.html","durationMs":463,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-03T08:27:10.187Z","cmd":"perf","args":"","origin":"http://127.0.0.1:8848/index.html","durationMs":2,"status":"ok","hasCookies":false,"mode":"launched"}
