@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>花信未至 · 404 · 百城花信</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cg%20transform%3D%22translate(50%2050)%22%3E%3Cg%20fill%3D%22%23a8324a%22%3E%3Cellipse%20rx%3D%2214%22%20ry%3D%2222%22%20cy%3D%22-22%22%2F%3E%3Cellipse%20rx%3D%2214%22%20ry%3D%2222%22%20cy%3D%22-22%22%20transform%3D%22rotate(72)%22%2F%3E%3Cellipse%20rx%3D%2214%22%20ry%3D%2222%22%20cy%3D%22-22%22%20transform%3D%22rotate(144)%22%2F%3E%3Cellipse%20rx%3D%2214%22%20ry%3D%2222%22%20cy%3D%22-22%22%20transform%3D%22rotate(216)%22%2F%3E%3Cellipse%20rx%3D%2214%22%20ry%3D%2222%22%20cy%3D%22-22%22%20transform%3D%22rotate(288)%22%2F%3E%3C%2Fg%3E%3Ccircle%20r%3D%227%22%20fill%3D%22%23f0c640%22%2F%3E%3Ccircle%20r%3D%223%22%20fill%3D%22%237a1f33%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Ma+Shan+Zheng&family=Cormorant+Garamond:ital@1&display=swap" rel="stylesheet">
+<style>
+  :root { --crimson:#a8324a; --gold:#f0c640; --ink:#7a1f33; --cream:#f5ecdb; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center;
+    background:radial-gradient(circle at 50% 30%, #fbf4e6, var(--cream));
+    color:var(--ink); font-family:'Noto Serif SC',serif; text-align:center; padding:24px; gap:6px;
+    overflow:hidden;
+  }
+  .plum { width:96px; height:96px; margin-bottom:8px; animation:breath 4s ease-in-out infinite; }
+  @keyframes breath { 0%,100%{transform:scale(1) rotate(0)} 50%{transform:scale(1.06) rotate(4deg)} }
+  .code { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:84px; line-height:1; color:var(--crimson); letter-spacing:2px; }
+  h1 { font-family:'Ma Shan Zheng',serif; font-size:40px; font-weight:400; color:var(--crimson); margin:4px 0; }
+  p { font-size:15px; opacity:.7; max-width:420px; line-height:1.9; }
+  .home {
+    margin-top:22px; display:inline-block; padding:11px 30px; border-radius:999px;
+    background:var(--crimson); color:#fff; text-decoration:none; font-size:15px; letter-spacing:1px;
+    box-shadow:0 6px 18px rgba(168,50,74,.28); transition:transform .2s, box-shadow .2s;
+  }
+  .home:hover { transform:translateY(-2px); box-shadow:0 10px 24px rgba(168,50,74,.35); }
+  .sig { margin-top:30px; font-family:'Cormorant Garamond',serif; font-style:italic; font-size:13px; opacity:.4; }
+  @media (prefers-reduced-motion: reduce) { .plum { animation:none; } }
+</style>
+</head>
+<body>
+  <svg class="plum" viewBox="0 0 100 100" aria-hidden="true">
+    <g transform="translate(50 50)">
+      <g fill="#a8324a">
+        <ellipse rx="14" ry="22" cy="-22"/><ellipse rx="14" ry="22" cy="-22" transform="rotate(72)"/>
+        <ellipse rx="14" ry="22" cy="-22" transform="rotate(144)"/><ellipse rx="14" ry="22" cy="-22" transform="rotate(216)"/>
+        <ellipse rx="14" ry="22" cy="-22" transform="rotate(288)"/>
+      </g>
+      <circle r="7" fill="#f0c640"/><circle r="3" fill="#7a1f33"/>
+    </g>
+  </svg>
+  <div class="code">404</div>
+  <h1>此处花信未至</h1>
+  <p>你寻的这一页，或许还在别处含苞。<br>不如回到地图，看看眼下哪座城正花开。</p>
+  <a class="home" href="/Baicheng-huaxin/">← 回到百城花信</a>
+  <div class="sig">花信录 · Anno MMXXVI</div>
+</body>
+</html>

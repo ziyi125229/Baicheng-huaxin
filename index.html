@@ -74,7 +74,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;700;900&family=Ma+Shan+Zheng&family=ZCOOL+XiaoWei&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Ma+Shan+Zheng&family=ZCOOL+XiaoWei&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <style>
 /* 开屏 splash —— JS 没跑完前先把品牌立刻显示出来,消除空白等待感 */
 .splash {
@@ -2021,6 +2021,17 @@ footer {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
 }
+.data-source {
+  margin-top: 8px;
+  font-size: 11px;
+  line-height: 1.6;
+  opacity: 0.55;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.data-source a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
 
 @media (max-width: 1000px) {
   .main { grid-template-columns: 1fr; }
@@ -2372,6 +2383,7 @@ footer {
       <div class="legend-item"><span class="legend-dot selected"></span><span>选中</span></div>
     </div>
     <div class="signature">花信录 · Anno MMXXVI</div>
+    <div class="data-source">市花评定 · 花期 · 赏花点均据公开资料整理；实景照片来自 <a href="https://commons.wikimedia.org/" target="_blank" rel="noopener">Wikimedia Commons</a> 与 <a href="https://www.inaturalist.org/" target="_blank" rel="noopener">iNaturalist</a>（CC 协议），并经人工逐张核验；水彩花卉为本站 Canvas 手绘。</div>
   </footer>
 </div>
 
@@ -2895,13 +2907,13 @@ const CITY_FLOWERS = {
 // =============================================================
 const SPOT_CUSTOM_IMAGES = {
   // ↓↓↓ 自动核验后内嵌(实景优先+物种兜底) ↓↓↓
-  '武汉大学樱园': 'images/spots/sp/cherry-1.jpg',
-  '顾村公园': 'images/spots/sp/cherry-4.jpg',
-  '玉渊潭公园': 'images/spots/sp/cherry-1.jpg',
-  '鼋头渚': 'images/spots/sp/cherry-4.jpg',
+  '武汉大学樱园': 'images/spots/武汉大学樱园.jpg',
+  '顾村公园': 'images/spots/顾村公园.jpg',
+  '玉渊潭公园': 'images/spots/玉渊潭公园.jpg',
+  '鼋头渚': 'images/spots/鼋头渚.jpg',
   '中山公园樱花路': 'images/spots/中山公园樱花路.jpg',
   '平坝樱花园': 'images/spots/sp/cherry-1.jpg',
-  '林芝桃花沟': 'images/spots/sp/peach-1.jpg',
+  '林芝桃花沟': 'images/spots/林芝桃花沟.jpg',
   '平谷桃花海': 'images/spots/sp/peach-3.jpg',
   '龙泉驿桃花故里': 'images/spots/sp/peach-1.jpg',
   '梅花山': 'images/spots/梅花山.jpg',
@@ -2910,10 +2922,10 @@ const SPOT_CUSTOM_IMAGES = {
   '超山梅花': 'images/spots/sp/plum-4.jpg',
   '世纪公园梅园': 'images/spots/sp/plum-1.jpg',
   '婺源油菜花海': 'images/spots/sp/canola-3.jpg',
-  '罗平油菜花': 'images/spots/sp/canola-1.jpg',
+  '罗平油菜花': 'images/spots/罗平油菜花.jpg',
   '门源油菜花': 'images/spots/sp/canola-3.jpg',
   '兴化垛田': 'images/spots/兴化垛田.jpg',
-  '王城公园牡丹': 'images/spots/sp/peony-1.jpg',
+  '王城公园牡丹': 'images/spots/王城公园牡丹.jpg',
   '曹州牡丹园': 'images/spots/sp/peony-2.jpg',
   '景山公园牡丹': 'images/spots/sp/peony-1.jpg',
   '百里杜鹃': 'images/spots/sp/azalea-2.jpg',
@@ -2921,7 +2933,7 @@ const SPOT_CUSTOM_IMAGES = {
   '长桥紫藤': 'images/spots/sp/wisteria-1.jpg',
   '紫竹院紫藤': 'images/spots/sp/wisteria-3.jpg',
   '烈士陵园木棉': 'images/spots/sp/kapok-1.jpg',
-  '西湖荷花': 'images/spots/sp/lotus-1.jpg',
+  '西湖荷花': 'images/spots/西湖荷花.jpg',
   '大明湖荷花': 'images/spots/sp/lotus-3.jpg',
   '北海荷花': 'images/spots/北海荷花.jpg',
   '微山湖荷花': 'images/spots/sp/lotus-5.jpg',
@@ -2929,8 +2941,8 @@ const SPOT_CUSTOM_IMAGES = {
   '海洋公园向日葵': 'images/spots/sp/sunflower-1.jpg',
   '满觉陇桂雨': 'images/spots/sp/osmanthus-1.jpg',
   '光福桂花': 'images/spots/sp/osmanthus-c1.jpg',
-  '开封菊花节': 'images/spots/sp/chrysanthemum-1.jpg',
-  '香山红叶': 'images/spots/sp/maple-1.jpg',
+  '开封菊花节': 'images/spots/开封菊花节.jpg',
+  '香山红叶': 'images/spots/香山红叶.jpg',
   '天平山红枫': 'images/spots/sp/maple-c2.jpg',
   '栖霞山': 'images/spots/sp/maple-c4.jpg',
   '岳麓山红叶': 'images/spots/sp/maple-c3.jpg',
@@ -2969,7 +2981,7 @@ const SPOT_CUSTOM_IMAGES = {
   '福州茉莉': 'images/spots/sp/jasmine-1.jpg',
   '旅顺二〇三樱花': 'images/spots/sp/cherry-4.jpg',
   '飞凤山桃花': 'images/spots/sp/peach-3.jpg',
-  '瘦西湖琼花': 'images/spots/sp/qionghua-4.jpg',
+  '瘦西湖琼花': 'images/spots/瘦西湖琼花.jpg',
   '焦山樱花': 'images/spots/sp/cherry-1.jpg',
   '东湖梅花': 'images/spots/东湖梅花.jpg',
   '月湖紫薇': 'images/spots/sp/crapemyrtle-2.jpg',

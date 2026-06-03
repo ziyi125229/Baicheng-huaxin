@@ -13,3 +13,12 @@
 {"ts":"2026-06-02T07:56:37.409Z","cmd":"wait","args":"--networkidle","origin":"http://127.0.0.1:8848/index.html","durationMs":0,"status":"ok","hasCookies":false,"mode":"launched"}
 {"ts":"2026-06-02T07:56:37.447Z","cmd":"console","args":"--errors","origin":"http://127.0.0.1:8848/index.html","durationMs":1,"status":"ok","hasCookies":false,"mode":"launched"}
 {"ts":"2026-06-02T07:56:37.730Z","cmd":"screenshot","args":"/tmp/bhx-spots.png","origin":"http://127.0.0.1:8848/index.html","durationMs":244,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-03T07:27:09.294Z","cmd":"viewport","args":"390x844","origin":"about:blank","durationMs":5,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-03T07:27:10.679Z","cmd":"goto","args":"http://127.0.0.1:8848/index.html","origin":"http://127.0.0.1:8848/index.html","durationMs":1350,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-03T07:27:12.209Z","cmd":"wait","args":"--networkidle","origin":"http://127.0.0.1:8848/index.html","durationMs":1487,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-03T07:27:12.389Z","cmd":"screenshot","args":"/tmp/bhx-mobile.png","origin":"http://127.0.0.1:8848/index.html","durationMs":130,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-03T07:37:33.967Z","cmd":"viewport","args":"1000x720","origin":"http://127.0.0.1:8848/index.html","durationMs":12,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-03T07:37:34.038Z","cmd":"goto","args":"http://127.0.0.1:8848/404.html","origin":"http://127.0.0.1:8848/404.html","durationMs":20,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-03T07:37:35.391Z","cmd":"screenshot","args":"/tmp/bhx-404.png","origin":"http://127.0.0.1:8848/404.html","durationMs":1321,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-03T08:22:07.205Z","cmd":"goto","args":"http://127.0.0.1:8848/index.html","origin":"http://127.0.0.1:8848/index.html","durationMs":1334,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-06-03T08:22:07.260Z","cmd":"console","args":"--errors","origin":"http://127.0.0.1:8848/index.html","durationMs":1,"status":"ok","hasCookies":false,"mode":"launched"}
