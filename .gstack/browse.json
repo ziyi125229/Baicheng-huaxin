@@ -1,9 +1,0 @@
-{
-  "pid": 22472,
-  "port": 15548,
-  "token": "68a952eb-a146-44ab-9cf6-a23ebe9f38c6",
-  "startedAt": "2026-06-03T08:22:05.779Z",
-  "serverPath": "/Users/zhangziyi/.claude/skills/gstack/browse/src/server.ts",
-  "mode": "launched",
-  "configHash": "303a7eeccc03078b"
-}
