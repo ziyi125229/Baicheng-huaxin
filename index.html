@@ -3077,6 +3077,11 @@ const SPOT_CUSTOM_IMAGES = {
   // ↑↑↑ 自定义图片粘贴区结束 ↑↑↑
 };
 
+// 市花内嵌实景照(优先于运行时按拉丁名抓取;用于 iNaturalist 默认图不理想的情况)
+const CITY_FLOWER_PHOTOS = {
+  '云南山茶': 'images/spots/sp/camellia-2.jpg',
+};
+
 const FLOWER_SPOTS = [
   // ===== 樱花 (3-4月) =====
   {name: '武汉大学樱园', city: '武汉', region: '湖北 · 武汉', offset: [3, 0], flower: '樱花', type: 'cherry', color: '#f5b8c8',
@@ -10947,6 +10952,20 @@ function selectCity(cityName) {
         // 第一次切换时加载照片
         if (!photoLoaded) {
           if (loadingEl) loadingEl.classList.add('show');
+          // 优先用内嵌实景照(运行时抓取效果不佳的市花)
+          const embedded = CITY_FLOWER_PHOTOS[el.dataset.name];
+          if (embedded) {
+            const pl = new Image();
+            pl.onload = () => {
+              photoImg.src = embedded;
+              photoImg.classList.add('loaded');
+              if (loadingEl) loadingEl.classList.remove('show');
+            };
+            pl.onerror = () => { if (loadingEl) loadingEl.textContent = '照片暂不可用'; };
+            pl.src = embedded;
+            photoLoaded = true;
+            return;
+          }
           try {
             const info = await loadFlowerPhoto(type, latin);
             if (info && (info.large || info.medium)) {
