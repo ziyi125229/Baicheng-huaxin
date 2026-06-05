@@ -1,6 +1,6 @@
 // 百城花信 service worker
 // 策略: 主页面 stale-while-revalidate(更新及时),静态资源 cache-first
-const CACHE = 'baicheng-huaxin-v2';
+const CACHE = 'baicheng-huaxin-v3';
 const PRECACHE = [
   './',
   './index.html',
@@ -25,12 +25,13 @@ self.addEventListener('fetch', e => {
   // 只处理同源 GET
   if (e.request.method !== 'GET' || url.origin !== location.origin) return;
 
-  // 主文档: stale-while-revalidate
-  if (e.request.mode === 'navigate' || url.pathname.endsWith('.html') || url.pathname.endsWith('/')) {
+  // 主文档 + 赏花点图片: stale-while-revalidate(更新及时,改了图访客会自动刷新)
+  if (e.request.mode === 'navigate' || url.pathname.endsWith('.html') || url.pathname.endsWith('/')
+      || url.pathname.includes('/images/')) {
     e.respondWith(staleWhileRevalidate(e.request));
     return;
   }
-  // 静态资源(icon/manifest/og 图): cache-first
+  // 其余静态资源(icon/manifest): cache-first
   e.respondWith(cacheFirst(e.request));
 });
 
