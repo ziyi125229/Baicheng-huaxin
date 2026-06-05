@@ -6750,7 +6750,31 @@ function drawSmallFlower(ctx, x, y, size, type, color, rand) {
     ctx.beginPath();
     ctx.arc(0, 0, size*0.16, 0, Math.PI*2);
     ctx.fill();
-  } else if (type === 'plum' || type === 'azalea' || type === 'meigui' || type === 'cottonRose') {
+  } else if (type === 'meigui') {
+    // 玫瑰 - 多层卷瓣,饱满立体(区别于梅/桃的单层5瓣)
+    // 外层 5 瓣
+    for (let i = 0; i < 5; i++) {
+      const a = (i / 5) * Math.PI * 2 - Math.PI/2 + (rand()-0.5)*0.1;
+      watercolorPetal(ctx, 0, 0, size*0.62, size*0.98, a, color, rand, {rounded: true, layers: 7});
+    }
+    // 中层 5 瓣(错开角度)
+    const midC = color.map(c => Math.min(255, c + 10));
+    for (let i = 0; i < 5; i++) {
+      const a = (i / 5) * Math.PI * 2 - Math.PI/2 + 0.55;
+      watercolorPetal(ctx, 0, 0, size*0.42, size*0.66, a, midC, rand, {rounded: true, layers: 6});
+    }
+    // 内层卷心 4 瓣
+    const inC = color.map(c => Math.min(255, c + 24));
+    for (let i = 0; i < 4; i++) {
+      const a = (i / 4) * Math.PI * 2 + (rand()-0.5)*0.15;
+      watercolorPetal(ctx, 0, 0, size*0.22, size*0.34, a, inC, rand, {rounded: true, layers: 5});
+    }
+    // 紧实卷心
+    ctx.fillStyle = `rgba(${color[0]*0.6|0}, ${color[1]*0.55|0}, ${color[2]*0.6|0}, 0.85)`;
+    ctx.beginPath();
+    ctx.arc(0, 0, size*0.1, 0, Math.PI*2);
+    ctx.fill();
+  } else if (type === 'plum' || type === 'azalea' || type === 'cottonRose') {
     // 5 瓣小花
     const petalCount = 5;
     for (let i = 0; i < petalCount; i++) {
