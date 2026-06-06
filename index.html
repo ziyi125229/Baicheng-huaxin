@@ -135,14 +135,24 @@
 }
 .splash-enter {
   position: absolute;
-  bottom: 40px;
-  font-size: 11px;
-  color: #8a7654;
-  letter-spacing: 0.4em;
-  text-indent: 0.4em;
+  bottom: 58px;
+  padding: 12px 38px;
+  font-family: 'Noto Serif SC', serif;
+  font-size: 15px;
+  letter-spacing: 0.34em;
+  text-indent: 0.34em;
+  color: #fff;
+  background: linear-gradient(135deg, #b83a52, #8f2740);
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(168,50,74,0.32);
   opacity: 0;
-  animation: splashFadeHint 1.2s ease-out 3.2s forwards;
+  animation: splashEnterIn 0.9s cubic-bezier(.2,.8,.25,1) 2.4s forwards;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+.splash-enter:hover { transform: translateY(-2px) scale(1.03); box-shadow: 0 12px 28px rgba(168,50,74,0.42); }
+.splash-enter:active { transform: translateY(0) scale(0.99); }
 .splash-petal {
   position: absolute;
   top: -8%;
@@ -175,7 +185,7 @@ body.app-ready .splash {
 }
 @keyframes splashRule { to { width: 140px; } }
 @keyframes splashFadeIn { to { opacity: 0.9; } }
-@keyframes splashFadeHint { to { opacity: 0.6; } }
+@keyframes splashEnterIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes splashDrift {
   0%   { transform: translateY(0) rotate(0); opacity: 0; }
   10%  { opacity: 0.7; }
@@ -2364,7 +2374,7 @@ footer {
     <div class="splash-tagline">A FLORAL ATLAS OF CHINA</div>
     <div class="splash-poem">点 · 城 · 看 · 花 · 开</div>
   </div>
-  <div class="splash-enter">轻触进入</div>
+  <button class="splash-enter" id="splashEnter" type="button" aria-label="进入百城花信">入园看花</button>
 </div>
 <div class="page">
   <header>
@@ -11265,20 +11275,17 @@ initShareButton();
 initLayerSwitch();
 initFloatingPetals();
 
-// 初始化完毕,但给开屏一个从容的亮相:保证最短展示时长后再淡出;轻触可提前进入
+// 开屏不再自动跳转:停在进入页,点「入园看花」按钮(或点开屏任意处)再进入地图
 (function dismissSplash() {
-  const MIN_MS = 4000;             // 进入页最短停留,让入场动画从容走完
   const splash = document.getElementById('splash');
+  const enterBtn = document.getElementById('splashEnter');
   let done = false;
   const fadeOut = () => { if (done) return; done = true; document.body.classList.add('app-ready'); };
-  // 轻触/点击/按键 = 提前进入(老访客不必等)
+  if (enterBtn) enterBtn.addEventListener('click', (e) => { e.stopPropagation(); fadeOut(); }, { once: true });
   if (splash) {
     splash.addEventListener('click', fadeOut, { once: true });
     splash.addEventListener('touchstart', fadeOut, { once: true, passive: true });
   }
-  window.addEventListener('keydown', fadeOut, { once: true });
-  const elapsed = performance.now();
-  setTimeout(fadeOut, Math.max(0, MIN_MS - elapsed));
 })();
 // 启动时按当月触发一次
 setTimeout(() => {
